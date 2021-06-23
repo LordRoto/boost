@@ -263,10 +263,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orbus (Player)
       objectReference: {fileID: 0}
-    - target: {fileID: 3980759802484235732, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 5268636189228736039, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -584,41 +580,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1521501386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3980759802484235732, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
-  m_PrefabInstance: {fileID: 606606632}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1521501387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521501386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ecfc39898a8dc4fa916172d03cee03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainThrust: 1000
-  rotation: 200
---- !u!54 &1521501388
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521501386}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
 --- !u!1 &1801001770
 GameObject:
   m_ObjectHideFlags: 0
