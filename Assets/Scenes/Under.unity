@@ -123,23 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &586308235 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3980759802484235732, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
-  m_PrefabInstance: {fileID: 606606632}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &586308243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586308235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c0ed1cb4564864f84501e2e876c2f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &588828951
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +225,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1521501387, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
+      propertyPath: whoosh
+      value: 
+      objectReference: {fileID: 8300000, guid: 7927970be016a1a44aae506c568121ed, type: 3}
+    - target: {fileID: 1521501393, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3980759802484235732, guid: 7f47d6001296a0141b3f9a78d31f66ba, type: 3}
       propertyPath: m_Name
       value: Orbus (Player)
