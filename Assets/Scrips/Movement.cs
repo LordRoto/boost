@@ -13,6 +13,11 @@ public class Movement : MonoBehaviour
     [SerializeField] float mainThrust = 1000f;
     [SerializeField] float rotation = 200f;
     [SerializeField] AudioClip whoosh;
+    [SerializeField] ParticleSystem mainthrustParticles;
+        [SerializeField] ParticleSystem leftthrustParticles;
+        [SerializeField] ParticleSystem rightthrustParticles;
+
+
     Rigidbody rb;
     AudioSource audioSource;
 
@@ -34,35 +39,58 @@ public class Movement : MonoBehaviour
     {
         ProcessJump();
         ProcessRotation();
+    
+
+
+
+
+
+
     }
+
+
 
        void ProcessJump()
         {
             if (Input.GetKey(KeyCode.Space))
-            {
-                rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-                if(!audioSource.isPlaying)
-                {
-                    audioSource.PlayOneShot(whoosh);
-                }
-            }
-            else
+        {
+            StartThrusting();
+        }
+        else
             {
             audioSource.Stop();
+            mainthrustParticles.Stop();
             }
         }
 
-       void ProcessRotation()
+    
+
+    void ProcessRotation()
        {
+            //Goin Right
             if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(rotation);
+            if (!leftthrustParticles.isPlaying)
+                {
+                leftthrustParticles.Play();
+                }
+            
         }
+           //Goin Left 
            else if (Input.GetKey(KeyCode.D))
         {
             ApplyRotation(-rotation);
+            if (!rightthrustParticles.isPlaying)
+                {
+                rightthrustParticles.Play();
+                }
         }
-
+        else //Please Stop
+        {
+            rightthrustParticles.Stop();
+            leftthrustParticles.Stop();
+        }
 
     }
     void ApplyRotation(float rotationThisFrame)
@@ -71,4 +99,39 @@ public class Movement : MonoBehaviour
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(whoosh);
+        }
+        if (!mainthrustParticles.isPlaying)
+        {
+            mainthrustParticles.Play();
+        }
+    }
 }

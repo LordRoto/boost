@@ -13,24 +13,49 @@ public class CollisionHandler : MonoBehaviour
         [SerializeField] ParticleSystem splatParticles;
         [SerializeField] ParticleSystem victoryParticles;
 
+        [SerializeField] ParticleSystem mainthrustParticles;
+        [SerializeField] ParticleSystem leftthrustParticles;
+        [SerializeField] ParticleSystem rightthrustParticles;
+     
+
         AudioSource audioSource;
-       
+        Rigidbody rb;
 
         bool isTransitioning = false;
+        bool collisionDisabled = false;
 
 void Start()
     {
 
         audioSource = GetComponent <AudioSource>();
-
+        rb = GetComponent <Rigidbody>();
+      
 
     }
 
 
-
-     void OnCollisionEnter(Collision other) 
+ void Update()
     {
-        if (isTransitioning){return;}
+        RespondToDebugKeys();
+
+    }
+
+    void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisabled = !collisionDisabled;   // Toggle Collision
+        }
+    }
+
+    void OnCollisionEnter(Collision other) 
+    {
+        if (isTransitioning || collisionDisabled){return;}
 
 
 
@@ -71,6 +96,9 @@ void Start()
         Invoke("ReloadLevel", levelLoadDelay);
         audioSource.PlayOneShot(splat);
         splatParticles.Play();
+        rightthrustParticles.Stop();
+        leftthrustParticles.Stop();
+        mainthrustParticles.Stop();
 
     }
 
