@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Under.unity
     guid: 4c144675d6c73ea499028b62b8de908c
+  - enabled: 1
+    path: Assets/Scenes/Relics.unity
+    guid: 874c38d23f7d4a04687c6c125c00b441
   m_configObjects: {}
