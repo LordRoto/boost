@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
         ProcessJump();
         ProcessRotation();
     
-
+        
 
 
 
@@ -54,14 +54,14 @@ public class Movement : MonoBehaviour
        void ProcessJump()
         {
             if (Input.GetKey(KeyCode.Space))
-        {
-            StartThrusting();
-        }
-        else
-            {
-            audioSource.Stop();
-            mainthrustParticles.Stop();
-            }
+                {
+                StartThrusting();
+                }
+            else
+                {
+                audioSource.Stop();
+                mainthrustParticles.Stop();
+                }
         }
 
     

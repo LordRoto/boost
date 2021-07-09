@@ -1,9 +1,5 @@
 using UnityEngine;
 
-
-
-
-
 public class MusicManager : MonoBehaviour
 {
     private static MusicManager musicManagerInstance;
@@ -13,10 +9,12 @@ public class MusicManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        if (musicManagerInstance == null) {
+        if (musicManagerInstance == null) 
+        {
             musicManagerInstance = this;
         }
-        else {
+        else 
+        {
             Destroy(gameObject);
         }
     }

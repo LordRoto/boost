@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 1521501393}
   - component: {fileID: 1521501387}
   - component: {fileID: 962093728}
+  - component: {fileID: 1023937017}
   m_Layer: 0
   m_Name: Orbus
   m_TagString: Player
@@ -718,6 +719,7 @@ MonoBehaviour:
   mainthrustParticles: {fileID: 979476939884163460}
   leftthrustParticles: {fileID: 2984136855525181129}
   rightthrustParticles: {fileID: 292127675144162507}
+  BGM: {fileID: 0}
 --- !u!114 &962093728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +740,18 @@ MonoBehaviour:
   mainthrustParticles: {fileID: 979476939884163460}
   leftthrustParticles: {fileID: 2984136855525181129}
   rightthrustParticles: {fileID: 292127675144162507}
+--- !u!114 &1023937017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980759802484235732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833dcb67ed7122c42a4da20fc66e36a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6255418853284248385
 GameObject:
   m_ObjectHideFlags: 0

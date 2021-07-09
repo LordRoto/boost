@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Relics.unity
     guid: 874c38d23f7d4a04687c6c125c00b441
+  - enabled: 1
+    path: Assets/Scenes/Otherworld.unity
+    guid: a12731b743d00694cb8e295b36c3810e
+  - enabled: 1
+    path: Assets/Scenes/End World.unity
+    guid: 8acd8bb8654c71a43a4a5a97c92c5162
   m_configObjects: {}
