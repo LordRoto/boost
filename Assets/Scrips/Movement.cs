@@ -98,33 +98,9 @@ public class Movement : MonoBehaviour
     {
         transform.Rotate(Vector3.forward * Time.deltaTime * rotationThisFrame);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 private void StartThrusting()
     {
+        Debug.Log("Thrusting");
         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
         if (!audioSource.isPlaying)
         {
